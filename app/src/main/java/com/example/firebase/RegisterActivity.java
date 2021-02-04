@@ -60,6 +60,7 @@ public class RegisterActivity extends AppCompatActivity {
                 }else{
                     Toast.makeText(RegisterActivity.this, "Registration user is failed", Toast.LENGTH_SHORT).show();
                 }
+                startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
             }
         });
     }

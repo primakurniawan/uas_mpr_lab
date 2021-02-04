@@ -22,39 +22,6 @@
         android:id="@+id/textView"
         android:layout_below="@id/logout"
         android:textSize="22sp"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Edit Text"
-        android:layout_below="@id/textView"
-        android:layout_alignParentRight="true"
-        android:id="@+id/editTextBtn"/>
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="text"
-        android:id="@+id/editText"
-        android:layout_below="@id/editTextBtn"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="save text"
-        android:id="@+id/saveTextBtn"
-        android:layout_below="@id/editText"
-        android:layout_alignParentRight="true"/>
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@mipmap/ic_launcher_round"
-        android:layout_below="@id/saveTextBtn"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/photo"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Take a photo"
-        android:id="@+id/photoBtn"
-        android:layout_below="@id/photo"
-        android:layout_centerHorizontal="true"/>
+
 
 </RelativeLayout>
