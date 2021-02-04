@@ -31,11 +31,11 @@
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="168dp"
-        android:layout_height="127dp"
+        android:layout_width="308dp"
+        android:layout_height="204dp"
         android:gravity="center"
         android:text=" Python is widely regarded as a programming language that’s easy to learn, due to its simple syntax, a large library of standards and toolkits, and integration with other popular programming languages such as C and C++. "
-        android:textSize="12sp"
+        android:textSize="14sp"
         android:typeface="sans"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/textView2"
