@@ -3,9 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.firebase">
 
-    <uses-permission android:name="android.permission.CAMERA"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         tools:ignore="ScopedStorage" />
+
     <uses-feature android:name="android.hardware.camera" />
 
     <application
@@ -15,7 +17,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Firebase">
-        <activity android:name=".MainActivity"/>
+        <activity android:name=".C"></activity>
+        <activity android:name=".Csharp" />
+        <activity android:name=".Java" />
+        <activity android:name=".JavaScript" />
+        <activity android:name=".Python" />
+        <activity android:name=".MainActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".StartActivity">
@@ -25,8 +32,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
     </application>
 
 </manifest>

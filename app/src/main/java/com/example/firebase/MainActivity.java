@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -23,6 +24,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     Button logout;
+    ListView lv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,8 +32,8 @@ public class MainActivity extends AppCompatActivity {
 
         InputStream inputStream = getResources().openRawResource(R.raw.data);
         CSVFile csvFile = new CSVFile(inputStream);
-        List<String[]> foodList = csvFile.read();
-        MyListAdapter adapter=new MyListAdapter(this, R.layout.listrow,R.id.txtid, data);
+        List<String[]> data1 = csvFile.read();
+        MyListAdapter adapter=new MyListAdapter(this, R.layout.listrow,R.id.txtid,data1);
         ListView listView=(ListView)findViewById(R.id.listview);
         listView.setAdapter(adapter);
 
@@ -45,6 +47,32 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, StartActivity.class));
             }
         });
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                if (position == 1) {
+                    Intent intent = new Intent(view.getContext(), Python.class);
+                    startActivityForResult(intent, 0);
+                }
+                if (position == 2) {
+                    Intent intent = new Intent(view.getContext(), JavaScript.class);
+                    startActivityForResult(intent, 0);
+                }
+                if (position == 3) {
+                    Intent intent = new Intent(view.getContext(), Java.class);
+                    startActivityForResult(intent, 0);
+                }
+                if (position == 4) {
+                    Intent intent = new Intent(view.getContext(), Csharp.class);
+                    startActivityForResult(intent, 0);
+                }
+                if (position == 5) {
+                    Intent intent = new Intent(view.getContext(), C.class);
+                    startActivityForResult(intent, 0);
+                }
+            }
+        });
+
     }
     private void readDatabase() {
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("text");
